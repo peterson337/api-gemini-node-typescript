@@ -11,7 +11,7 @@ routes.use("/uploads", express.static("uploads"));
 routes.use(express.json());
 dotenv.config();
 // Api do gemini
-const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 // Rotas
 routes.post("/upload", async function (req, res) {
