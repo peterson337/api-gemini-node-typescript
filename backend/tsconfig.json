@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    // "lib": ["ES2023"],
+    "module": "node16",
+    "target": "ES2022",
+    "moduleResolution": "NodeNext",
+    "baseUrl": "src",
+    "outDir": "dist",
+    "sourceMap": true,
+    "noImplicitAny": true
+  },
+
+  "include": ["src/**/*"]
+}
