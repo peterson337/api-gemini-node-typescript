@@ -33,7 +33,7 @@ routes.use(express.json());
 dotenv.config();
 
 // Api do gemini
-const genAI = new GoogleGenerativeAI(process.env.API_KEY as string);
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY as string);
 
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
@@ -49,8 +49,6 @@ routes.post("/upload", async function (req, res) {
       measure_type: formattedMeasure_type,
       measure_datetime: formattedDateMeasureDateTime,
     });
-
-    console.log(formattedMeasure_type);
 
     if (
       image === "" ||
