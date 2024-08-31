@@ -8,7 +8,7 @@ app.use(routes);
 app.listen(4500, async () => {
     console.log("Servidor iniciado na porta 4500");
     try {
-        await mongoose.connect(`mongodb+srv://user:tlPLkbh7e8EDLdpU@cluster0.arjlo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`);
+        await mongoose.connect(process.env.API_KEY_MONGODB as string);
         console.log("Banco de dados conectado.");
     }
     catch (error) {
