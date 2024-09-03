@@ -1,16 +1,13 @@
 version: "3"
 
 services:
-  payment_backend:
-    container_name: payment_backend
+  teste_tecnico:
+    container_name: teste_tecnico
     build:
       context: "./"
       dockerfile: Dockerfile
     ports:
       - "4500:4500"
-    environment:
-      - API_KEY_MONGODB=${API_KEY_MONGODB}
-      - API_KEY=${GEMINI_API_KEY}
     command: npm start
     depends_on:
       - mongo
@@ -25,3 +22,4 @@ services:
 
 volumes:
   mongo-data:
+
